@@ -1,3 +1,20 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["@typescript-eslint", "prettier", "react", "react-hooks"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off"
+  }
 }
